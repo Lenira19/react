@@ -1,6 +1,6 @@
 const Menu = ({Name,Cost}) => {
 
-return <p>{Name} {Cost} </p>
+return <p>название {Name} цена {Cost} рублей</p>
 
 
 };
