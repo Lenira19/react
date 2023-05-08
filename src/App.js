@@ -1,55 +1,32 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 import Menu from './components/Menu';
+import style from "./components/Menu/MenuCard/MenuCard.module.css";
 
 
 function App() {
 
-  let Delish = [{
-    cost: 1580,
-    name: 'супСМакаронами'
+  const [cart, setCart] = useState([]);
+ 
+  const addToCart=(item) => (
+    setCart([...cart, item])
 
-  }
-    ,
+  );
 
-  {
-    cost: 450,
-    name: 'жареныеЯйца'
-  },
-
-  {
-    cost: 680,
-    name: 'оливьеСалат'
-  },
-
-  {
-    cost: 990,
-    name: 'ФунчозаСОвощами'
-  }]
-
+  
 
   return (
-    <div className="App">
-      <header className="App-header">
-        {Delish.map((item) => {
-         return <Menu Name={item.name} Cost={item.cost}/>
-        }
+    <div className={`App p-2 ${style.cart}`}>
+      <div className="mx-auto my-5 contaienr flex flex-row-reverse text-right">
+        <div>
+          <div className="text-xl">Корзина</div>
+          <div>Количество товаров:{cart.length}</div>
+          <div className={`${style.summ}`}>
+          Сумма:{ cart.reduce((sum,item)=>(sum+=item.price),0)} руб</div>
+        </div>
+      </div >
 
-        )}
-
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Menu onItemBuy={(item=>addToCart(item))}/>
     </div>
   );
 }
