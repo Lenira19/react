@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+
+
 const MenuCard = ({ item, onClickBuy=()=>{}  }) => {
 
     const ing = (
@@ -11,7 +14,7 @@ const MenuCard = ({ item, onClickBuy=()=>{}  }) => {
     return (< div class="rounded overflow-hidden shadow-lg md:bg-slate-300" >
         <img src={item.picture} className="w-full object-contain h-48 w-96 " />
         <div className="p-2">
-            <Link to ={"/catalog/"}>
+            <Link to ={`/catalog/${item.id}`}>
             <div className='text-2xl font-bold py-2'>
                 {item.name}
             </div>
