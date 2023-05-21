@@ -1,4 +1,4 @@
-import MenuCard from "./MenuCard";
+import MenuCard from "../../components/MenuCard";
 
 const Menu = ({onItemBuy}) => {
     let list = [

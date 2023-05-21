@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
-import Menu from './components/Menu';
-import style from "./components/Menu/MenuCard/MenuCard.module.css";
+import Menu from './pages/MenuPages';
+import style from "./components/MenuCard/MenuCard.module.css";
 import { Outlet } from 'react-router-dom';
 import MainMenu from './components/MainMenu';
 
