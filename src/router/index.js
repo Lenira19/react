@@ -1,25 +1,29 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Outlet, createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import AboutPage from "../pages/About";
 import Menu from "../components/Menu";
+import ContactsPages from "../pages/ContactsPage";
 
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <App />, 
-        children: 
-        [{path: 'about',
-            element: <AboutPage />, children: [{
-                path: 'contacts', element: "<div><a href='tel:+7900000000'>7900000000'<a /><div />"}] 
-                
-                }
+        element: <App />,
+        children:
+            [{ path: '/', element: <Menu /> },
+            {
+                path: 'about',
+                element: <Outlet />, children: [{path:'',element:<AboutPage/>},{
+                    path: 'contacts', element: <ContactsPages />
+                }]
 
-                    ]
+            }
+
+            ]
 
     },
 
 
-                    ]);
+]);
 
-                    export default router; 
+export default router; 

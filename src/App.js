@@ -3,6 +3,7 @@ import './App.css';
 import Menu from './components/Menu';
 import style from "./components/Menu/MenuCard/MenuCard.module.css";
 import { Outlet } from 'react-router-dom';
+import MainMenu from './components/MainMenu';
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
   return (
     <div className={`App p-2 ${style.cart}`}>
       <div className="mx-auto my-5 contaienr flex flex-row-reverse text-right">
-      <Outlet></Outlet>
+  
         <div>
           <div className="text-xl">Корзина</div>
           <div>Количество товаров:{cart.length}</div>
@@ -29,10 +30,12 @@ function App() {
         </div>
         
       </div >
+      <MainMenu/>
+      <Outlet></Outlet>
 
-      <Menu onItemBuy={(item=>addToCart(item))}/>
+      {/* <Menu onItemBuy={(item=>addToCart(item))}/> */}
       
-
+      
      
     </div>
   );
