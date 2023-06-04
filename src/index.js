@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {RouterProvider} from "react-router-dom";
 import router from './router';
+import { Provider as StoreProvider } from "react-redux";
+import { store } from './srore';
 
 
  
@@ -13,7 +15,9 @@ import router from './router';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <StoreProvider store = {store}>
     <RouterProvider router={router}/>
+    </StoreProvider>
   </React.StrictMode>
 );
 
