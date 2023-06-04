@@ -10,16 +10,16 @@ import Menu from "../pages/MenuPages";
 
 
 
-
 const router = createBrowserRouter([
     {
         path: "/",
         element: <App />,
         children:
-            [{ path: '/', element: <Menu /> },{path:"/catalog/:id",element:<MenuItemPages/>},
+            [{ path: '/', element: <Menu/> },
+            { path: "/catalog/:id", element: <MenuItemPages /> },
             {
                 path: 'about',
-                element: <Outlet />, children: [{path:'',element:<AboutPage/>},{
+                element: <Outlet />, children: [{ path: '', element: <AboutPage /> }, {
                     path: 'contacts', element: <ContactsPages />
                 }]
 

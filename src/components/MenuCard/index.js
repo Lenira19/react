@@ -5,8 +5,7 @@ const MenuCard = ({ item, onClickBuy=()=>{}  }) => {
 
     const ing = (
         <div className='text-xm'>
-            {item.parameters.join(" , ")}
-
+            {item.paramet}
         </div>
 
     );

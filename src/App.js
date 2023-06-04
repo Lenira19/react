@@ -31,7 +31,7 @@ function App() {
         
       </div >
       <MainMenu/>
-      <Outlet></Outlet>
+      <Outlet context={[cart,addToCart]} ></Outlet>
 
       {/* <Menu onItemBuy={(item=>addToCart(item))}/> */}
       
