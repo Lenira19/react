@@ -6,14 +6,14 @@ const AboutPage = () => {
 
             <h1>Интернет магазин</h1>
             <p>О нашем агазине</p>
-            
-                <div class ="flex">
-                <Link to = 'contacts'>
-                    <p>Контакт</p></Link>
-                    </div>
-        
 
-       
+            <div class="flex">
+                <Link to='contacts'>
+                    <p>Контакт</p></Link>
+            </div>
+
+
+
         </div>
 
     );

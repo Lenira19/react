@@ -7,17 +7,17 @@ const MainMenu = () => {
         { title: 'О нас', link: '/about' }
 
     ];
-    
+
     return (
-    
-    <div className='flex gap-6'> 
-    {menuItems.map((item) =>(
-        <Link to={item.link}> {item.title}</Link>
-        
-        ))} 
-        
+
+        <div className='flex gap-6'>
+            {menuItems.map((item) => (
+                <Link to={item.link}> {item.title}</Link>
+
+            ))}
+
         </div>
-    
+
     );
 
 };
