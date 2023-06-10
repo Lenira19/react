@@ -8,6 +8,6 @@ export const store = configureStore({
 
     reducer: {
         cart: cartReducer,
-        menu:menuSlice
+        //menu:menuSlice
     }
 });

@@ -27,6 +27,7 @@ export const menuSlice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder.addCase(loadMenu.fulfilled, (state, action) => {
+            console.log(action.payload)
     
             state.loading = "fulfilled";
             state.items.length = 0;

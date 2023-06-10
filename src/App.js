@@ -25,7 +25,7 @@ function App() {
       </CartProvider>
       <Outlet></Outlet>
 
-      {/* <Menu onItemBuy={(item=>addToCart(item))}/> */}
+      
 
 
 
