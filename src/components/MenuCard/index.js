@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../srore/slices/cartSlice";
+import { addToCart } from "../../store/slices/cartSlice";
 
 
 const MenuCard = ({ item }) => {

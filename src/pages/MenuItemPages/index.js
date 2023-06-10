@@ -2,14 +2,7 @@ import { useParams } from "react-router-dom";
 import menu from "../../fakeData";
 
 const MenuItemPages = () => {
-   // const menu = useSelector(state => state.menu)
-   // const dispatch = useDispatch();
-    
-
-   //useEffect(()=>{
-    //dispatch(loadMenu());
-
-   // },[])
+  
 
     const { id } = useParams();
 

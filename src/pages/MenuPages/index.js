@@ -1,10 +1,13 @@
 
+import { useSelector } from "react-redux";
 import MenuCard from "../../components/MenuCard";
+import { fetchCatalog } from "../../store/slices/catalogSlice";
 
-import menu from "../../fakeData";
 
 
 const Menu = () => {
+const menu = useSelector(state=>state.catalog)
+fetchCatalog()
 
 
 
@@ -21,7 +24,7 @@ const Menu = () => {
         </div>
 
 
-    );
+    )
 
 
 };
